@@ -164,15 +164,15 @@ h2 {
 }
 
 
-.anak-content{
+.anak-content, .anak-contents{
   height: 250px;
   width:100%;
 }
-.anak-content p{
+.anak-content p, .anak-contents p{
   float: left;
   width: 70%;
   text-align: justify;
-  padding-top: 60px;
+  padding-top: 40px;
   font-size: 20px;
   padding-left: 20px;
   color: #8faadc;
@@ -208,21 +208,6 @@ h2 {
   height:auto;
 }
 
-
-
-.anak-contents{
-  height: 250px;
-  width:100%;
-}
-.anak-contents p{
-  float: left;
-  width: 70%;
-  text-align: justify;
-  padding-top: 60px;
-  font-size: 20px;
-  padding-left: 20px;
-  color: #8faadc;
-}
 .anak-contents img{
   padding-right: 10px;
   float: right;
@@ -307,22 +292,27 @@ h2 {
 
 @media (max-width: 1000px) {
   /* Tetapkan flex-wrap milik .flex-list */
-  .header, .footer, {
-    flex-wrap:wrap;
+  .header, .footer, #anak, .content, .anak-contents {
+    display: flex;
+    flex-wrap: wrap;
   }
- #anak, .content, .anak-content,.anak-contents,.anak-content1 {
-    flex-wrap:wrap;
+  .header-right,.header-left{
+    flex: auto;
   }
-}
-
-@media (max-width: 670px) {
-  /* Tetapkan flex-wrap milik .flex-list */
-  .header, .footer, {
-    flex-wrap:wrap;
+  .content p{
+    width:90%;
   }
-  #anak, .content, .anak-content,.anak-contents,.anak-content1 {
-    flex-wrap:wrap;
-    flex-direction: column;
+  .anak-content p{
+    width:50%;
+    font-size: 20px;
+  }
+  .anak-content1 p{
+    width:50%;
+    font-size: 20px;
+  }
+  .anak-contents p{
+    width:60%;
+    font-size: 17px;
   }
 }
 
